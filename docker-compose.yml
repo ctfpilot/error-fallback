@@ -1,5 +1,5 @@
 services:
-  instancing-fallback:
+  error-fallback:
     build: .
     ports:
       - "8080:80"
