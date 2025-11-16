@@ -40,7 +40,7 @@ python3 src/generator.py
 *This is done automatically in the Docker container build process.*
 
 To update the Kubernetes deployment file, update the deployment template in `template/k8s.yml`.  
-An updated `k8s/k8s.yml` will then be automatically generated on next release.
+An updated `k8s/k8s.yml` will then be automatically generated on the next release.
 
 ## Contributing
 
