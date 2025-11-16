@@ -5,7 +5,7 @@ metadata:
   labels:
     app.kubernetes.io/part-of: ctfpilot
     app.kubernetes.io/name: error-fallback
-    app.kubernetes.io/version: 1.1.0
+    app.kubernetes.io/version: 1.2.0-r.1
     app.kubernetes.io/component: challenges
     ctfpilot.com/component: error-fallback
 
@@ -25,7 +25,7 @@ spec:
       automountServiceAccountToken: false
       containers:
         - name: error-fallback
-          image: ctfpilot/error-fallback:1.1.0
+          image: ghcr.io/ctfpilot/error-fallback:1.2.0-r.1
           imagePullPolicy: Always
           ports:
           - name:  http
@@ -57,7 +57,7 @@ metadata:
   labels:
     app.kubernetes.io/part-of: ctfpilot
     app.kubernetes.io/name: error-fallback
-    app.kubernetes.io/version: 1.1.0
+    app.kubernetes.io/version: 1.2.0-r.1
     app.kubernetes.io/component: challenges
     ctfpilot.com/component: error-fallback
 spec:
