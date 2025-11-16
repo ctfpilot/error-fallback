@@ -20,6 +20,10 @@ The placeholders used are:
 - `/**ERROR_JS**/`: Any JavaScript code to be included in the error page. Inserted from `js`.
 - `/**ERROR_CSS**/`: Any CSS styles to be included in the error page . Inserted from `css`.
 
+For `error` layout pages, an additional placeholder is used:
+
+- `/**ERROR_CODE**/`: The error code for the error page (e.g., 404, 500). Replaced with the filename part of the content file.
+
 The templating use multiple layouts, which are defined in the `layouts` folder.  
 Each content file in the `contents` folder should be prefixed with the layout name, followed by an underscore.  
 For example, a content file named `error_404.html` will use the `error` layout, and produce a page named `404.html`.
