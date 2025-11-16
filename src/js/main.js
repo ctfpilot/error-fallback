@@ -1,11 +1,19 @@
-const POLL_INTERVAL = 5000;
+const POLL_INTERVAL = 10000;
 const parser = new DOMParser();
+
+const MAX_RELOAD_ATTEMPTS = 3;
+let reloadAttempts = 0;
 
 function errorHandler(e) {
   console.error("Error during challenge readiness check:", e);
-  setTimeout(() => {
-    location.reload();
-  }, 5000);
+  if (reloadAttempts < MAX_RELOAD_ATTEMPTS) {
+    reloadAttempts++;
+    setTimeout(() => {
+      location.reload();
+    }, 5000);
+  } else {
+    console.error("Maximum reload attempts reached. Please check your connection or try again later.");
+  }
 }
 
 function checkService() {
