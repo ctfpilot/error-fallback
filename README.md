@@ -20,6 +20,15 @@ The service can also be run locally, using the provided Docker compose file:
 docker compose up -d
 ```
 
+A [Docker image](https://github.com/ctfpilot/error-fallback/pkgs/container/error-fallback) is automatically built and published to GitHub Container Registry for each release.  
+You can pull the latest image with:
+
+```sh
+docker pull ghcr.io/ctfpilot/error-fallback:latest
+```
+
+*For the versions available, please see the [releases page](https://github.com/ctfpilot/error-fallback/releases).*
+
 ### Development
 
 In order to generate the pages, run the [`generator.py`](./src/generator.py) script in `src`:
