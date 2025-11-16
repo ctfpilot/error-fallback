@@ -17,7 +17,7 @@ jobs:
     secrets:
       RELEASE_GH_TOKEN: ${{ secrets.RELEASE_GH_TOKEN }}
     with:
-      repository: ctfpilot/error
+      repository: ctfpilot/error-fallback
       ENVIRONMENT: Release
 
   docker:
@@ -31,7 +31,7 @@ jobs:
       packages: write
       id-token: write
     with:
-      repository: ctfpilot/error
+      repository: ctfpilot/error-fallback
       semver: ${{ needs.release.outputs.version }}
       arguments: |
         VERSION=${{ needs.release.outputs.version }}
