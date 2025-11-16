@@ -27,7 +27,7 @@ You can pull the latest image with:
 docker pull ghcr.io/ctfpilot/error-fallback:latest
 ```
 
-*For the versions available, please the the [releases page](https://github.com/ctfpilot/error-fallback/releases).*
+*For the versions available, please see the [releases page](https://github.com/ctfpilot/error-fallback/releases).*
 
 ### Development
 
