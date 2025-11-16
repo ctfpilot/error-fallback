@@ -87,9 +87,9 @@ def generate():
             print(f"Layout '{layout}' not found for content '{content_name}'")
             continue
         
-        final_html = replace_indented_placeholder(layout_template, "/**CHALLENGE_HTML**/", content_data)
-        final_html = replace_indented_placeholder(final_html, "/**CHALLENGE_JS**/", JS_SCRIPTS)
-        final_html = replace_indented_placeholder(final_html, "/**CHALLENGE_CSS**/", CSS_STYLES)
+        final_html = replace_indented_placeholder(layout_template, "/**ERROR_HTML**/", content_data)
+        final_html = replace_indented_placeholder(final_html, "/**ERROR_JS**/", JS_SCRIPTS)
+        final_html = replace_indented_placeholder(final_html, "/**ERROR_CSS**/", CSS_STYLES)
         
         if layout == "error":
             final_html = final_html.replace("/**ERROR_CODE**/", filename)
