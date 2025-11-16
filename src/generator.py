@@ -64,7 +64,11 @@ def replace_indented_placeholder(template, placeholder, content):
     new_lines = []
     for line in lines:
         if placeholder in line:
-            indent = line[:line.index(placeholder)]
+            idx = line.find(placeholder)
+            if idx == -1:
+                new_lines.append(line)
+                continue
+            indent = line[:idx]
             content_lines = content.splitlines()
             for c_line in content_lines:
                 new_lines.append(indent + c_line)
