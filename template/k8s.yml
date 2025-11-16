@@ -24,7 +24,7 @@ spec:
       enableServiceLinks: false
       automountServiceAccountToken: false
       containers:
-        - name: instancing-fallback
+        - name: error-fallback
           image: ctfpilot/error-fallback:{ .Version }
           imagePullPolicy: Always
           ports:

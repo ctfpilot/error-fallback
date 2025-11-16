@@ -76,7 +76,11 @@ def generate():
     for content_name, content_data in CONTENTS:
         content_filename = content_name
         
-        layout, filename = content_filename.split("_", 1)
+        split_result = content_filename.split("_", 1)
+        if len(split_result) != 2:
+            print(f"Warning: Content filename '{content_filename}' does not contain an underscore separator. Skipping.")
+            continue
+        layout, filename = split_result
         
         layout_template = next((l for l_name, l in LAYOUTS if l_name == layout), None)
         if layout_template is None:
